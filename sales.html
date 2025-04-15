@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gudang dan Penjualan - Penjualan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Manajemen Penjualan</h1>
+        <a href="index.html" class="btn">Kembali ke Stok Gudang</a>
+        
+        <!-- Form untuk mencatat penjualan -->
+        <div class="form-container">
+            <select id="itemId" required>
+                <option value="">Pilih Barang</option>
+            </select>
+            <input type="number" id="quantity" placeholder="Jumlah Terjual" required>
+            <input type="text" id="notes" placeholder="Catatan (opsional)">
+            <button onclick="addSale()">Catat Penjualan</button>
+        </div>
+
+        <!-- Tabel untuk menampilkan riwayat penjualan -->
+        <table id="salesTable">
+            <thead>
+                <tr>
+                    <th>ID Transaksi</th>
+                    <th>Nama Barang</th>
+                    <th>Jumlah</th>
+                    <th>Tanggal</th>
+                    <th>Catatan</th>
+                </tr>
+            </thead>
+            <tbody id="salesBody"></tbody>
+        </table>
+    </div>
+    <script src="sales.js"></script>
+</body>
+</html>
